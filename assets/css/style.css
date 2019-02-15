@@ -1,10 +1,11 @@
 body{
-    background-color:rgb(152, 152, 152);
+    background-color:#acbebe;
 }
 
 h1,h2, h3
 {
     text-align:center;
+    background-color: #acbebe;
 }
 h3
 {
@@ -16,7 +17,7 @@ h3
 }
 .news p
 {
-    background-color :#ffffff;
+    background-color :#f4f4ef;
     padding: 5%;
 }
 .news
@@ -25,26 +26,26 @@ h3
     margin:auto;
 }
 .news form{
-    background-color:#808080;
+    background-color:#8e9b97;
     margin-bottom:2em;
     padding:1%;
     border: 1px solid black;
     
 }
 .news h2{
-    background-color:#808080;
+    background-color:#acbebe;
     padding:1%;
     border: 1px solid black;
 }
 
 .news h3 {
-    background-color:#808080;
+    background-color:#20232a;
     padding:1%;
     border: 1px solid black;
 }
 #nav{
-    background-color:gainsboro;
-    color: black;
+    background-color:#20232a;
+    color: #f4f4ef;
     height: 40px;
     line-height: 20px;
     margin-bottom: 15px;
@@ -52,7 +53,7 @@ h3
 
 }
 #hnav{
-    color: rgb(0, 0, 0);
+    color: #f4f4ef;;
 }
 #nav ul{
     list-style: none;
@@ -61,18 +62,18 @@ h3
 #user{
     font-size: 18px;
     text-transform: uppercase;
-    color: rgb(176, 18, 18);    
+    color: #a01d26;   
 }
 a
 {   
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: #f4f4ef;
     margin-right: 25px;
     margin-left: 10px;
 }
 a:hover{
     text-decoration: none;
-    color: rgb(91, 85, 176);
+    color: #a01d26;
 }
 #pError{
     text-align: center;
@@ -87,7 +88,7 @@ a:hover{
 }
 #delete{
     font-size:16px;
-    background-color: red;
+    background-color: #a01d26;
     padding: 3px;
     border-radius: 10px;
    
@@ -116,7 +117,7 @@ a:hover{
     background-color:#808080;  
 }
 #co, #reg{
-    background-color: brown;
+    background-color: #a01d26;
     padding: 5px;
     border-radius: 6px; 
     font-size: 14px;
@@ -133,6 +134,7 @@ a:hover{
 .scroll {
   
     background-color: gainsboro ;
+    color: #a01d26;
     padding: 5px;
     border-radius: 25px;
 

@@ -13,7 +13,7 @@ include('nav.php')
 
 
 
-    <a class=" down scroll" href="#"> <img src="assets\images\bas.png" alt="bas" width="30px">  Bas de page </a>
+    <a class=" down scroll" href="#"> <img src="assets\images\bas.png" alt="bas" width="30px"> Bas de page </a>
     <?php
     while ($data = $chapters->fetch())
     {
@@ -34,13 +34,14 @@ include('nav.php')
     <div class="row">
 
         <div class="col-md-6">
+            <?php if(isset($_SESSION['pseudo'])) { ?>
 
             <form class="form-control p-1" role="form" id="commBtn" method="POST"
                 action="index.php?action=comment&id=<?= $data['id'] ?>">
                 <button id="comBtn" name="comm">Commentaire</button>
 
             </form>
-
+            <?php } ?>
 
 
         </div>
@@ -48,11 +49,16 @@ include('nav.php')
 
 
         <div class="col-md-6">
+                <!-- masque le bouton suppr si pas admin connecté -->
+
+                
+            <?php if(isset($_SESSION['rang']) && $_SESSION['rang'] ==  '1') { ?>
+
             <form class="form-control p-1" role="form" id="suppButon" method="POST"
                 action="index.php?action=supp&id=<?= $data['id']?>">
                 <!-- masque bouton supprimer si non admin -->
 
-                <?php if(isset($_SESSION['rang']) && $_SESSION['rang'] ==  '1') { ?>
+
 
                 <button id="myBtn" name="supp">supprimer</button>
                 <?php } ?>
@@ -70,7 +76,7 @@ include('nav.php')
 
     ?>
 
-<a class=" up scroll" href="#"> <img src="assets\images\haut.png" alt="haut" width="30px">  Haut de page </a>
+    <a class=" up scroll" href="#"> <img src="assets\images\haut.png" alt="haut" width="30px"> Haut de page </a>
 </div>
 
 
