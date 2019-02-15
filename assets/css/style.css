@@ -1,0 +1,139 @@
+body{
+    background-color:rgb(152, 152, 152);
+}
+
+h1,h2, h3
+{
+    text-align:center;
+}
+h3
+{
+    background-color: #808080;
+    color:white;
+    font-size:1.5em;
+    padding: 1%;
+    margin-bottom:0px;
+}
+.news p
+{
+    background-color :#ffffff;
+    padding: 5%;
+}
+.news
+{
+    width:80%;
+    margin:auto;
+}
+.news form{
+    background-color:#808080;
+    margin-bottom:2em;
+    padding:1%;
+    border: 1px solid black;
+    
+}
+.news h2{
+    background-color:#808080;
+    padding:1%;
+    border: 1px solid black;
+}
+
+.news h3 {
+    background-color:#808080;
+    padding:1%;
+    border: 1px solid black;
+}
+#nav{
+    background-color:gainsboro;
+    color: black;
+    height: 40px;
+    line-height: 20px;
+    margin-bottom: 15px;
+    
+
+}
+#hnav{
+    color: rgb(0, 0, 0);
+}
+#nav ul{
+    list-style: none;
+    
+}
+#user{
+    font-size: 18px;
+    text-transform: uppercase;
+    color: rgb(176, 18, 18);    
+}
+a
+{   
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    margin-right: 25px;
+    margin-left: 10px;
+}
+a:hover{
+    text-decoration: none;
+    color: rgb(91, 85, 176);
+}
+#pError{
+    text-align: center;
+}
+#comm{
+    font-size:12px;
+    float:right;
+    background-color: rgb(33, 18, 144);
+    padding: 3px;
+    border-radius: 10px;
+    
+}
+#delete{
+    font-size:16px;
+    background-color: red;
+    padding: 3px;
+    border-radius: 10px;
+   
+}
+
+#back2{
+    font-size:16px;
+    background-color: rgb(49, 49, 49);
+    padding: 3px;
+    border-radius: 10px;
+    
+}
+#back{
+    font-size:12px;
+
+    margin-left: -25px;
+    background-color: rgb(135, 93, 93);
+    padding: 10px;
+    border-radius: 10px;
+    
+}
+#commentaire{
+    background-color:#808080; 
+}
+#edition{
+    background-color:#808080;  
+}
+#co, #reg{
+    background-color: brown;
+    padding: 5px;
+    border-radius: 6px; 
+    font-size: 14px;
+
+}
+
+#myBtn{
+    float: right;
+    color: red;
+}
+#comBtn{
+    color: blue;
+}
+.scroll {
+  
+    background-color: gainsboro ;
+    padding: 5px;
+    border-radius: 25px;
+
+}
