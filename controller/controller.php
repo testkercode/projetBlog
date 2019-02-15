@@ -132,3 +132,4 @@ function loginMember($pseudo, $password_1){
 }
 
 
+//  fin de controller
