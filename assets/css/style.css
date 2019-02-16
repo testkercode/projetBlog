@@ -1,8 +1,14 @@
 body{
-    background-color:#acbebe;
+    /* background-color:#acbebe; */
+    
 }
+h1{
+margin-bottom: 50px;
+border : 1px solid black;
 
-h1,h2, h3
+
+}
+h2, h3
 {
     text-align:center;
     background-color: #acbebe;
@@ -17,8 +23,10 @@ h3
 }
 .news p
 {
-    background-color :#f4f4ef;
+    /* background-color :#f4f4ef; */
     padding: 5%;
+    border: 1px solid black;
+    
 }
 .news
 {

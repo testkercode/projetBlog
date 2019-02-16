@@ -6,7 +6,11 @@ include('nav.php')
 
 
 <div class="news container">
-    <h1>Derniers chapitres du blog : </h1>
+
+
+<img class="img-fluid" width="100%" src="assets\images\ecrivain.jpg" alt="machine a ecrire">
+    <h1 class="text-center">BIENVENUE SUR MON BLOG  </h1>
+
 
 
 
@@ -24,8 +28,9 @@ include('nav.php')
 
     <h3>
         <?= htmlspecialchars($data['title']) ?>
-        <em>le <?= $data['creation_date'] ?></em>
+        
     </h3>
+    <em class="text-right">le <?= $data['creation_date'] ?></em>
 
     <p>
         <?= nl2br(htmlspecialchars($data['content'])) ?>
