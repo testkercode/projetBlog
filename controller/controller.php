@@ -66,6 +66,19 @@ function addComment($comment,$id_chapter, $id_member )
     }
 }
 
+// signale un commentaire 
+
+function addReport($id,$id_chapter)
+{
+    $reportManager = new CommentManager();
+
+    $reportManager->report($id);
+
+    
+    header('Location: index.php?action=comment&id='. $id_chapter);
+    
+}
+
 function editForm(){
     $editCommentManager = new EditCommentManager();
     $editComment = $editCommentManager->getComment($_GET['id']);

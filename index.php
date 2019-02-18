@@ -128,6 +128,7 @@ try{
 
 
         // ouverture de la page du chapitre concerné
+
         elseif ($_GET['action'] == 'comment') 
             { 
                 if (isset($_GET['id']) && $_GET['id'] > 0) 
@@ -163,6 +164,16 @@ try{
             }
         }
 
+        // Signaler le commentaire 
+
+        elseif ($_GET['action'] == 'click') {
+
+            $commentID = $_GET['id'];
+
+            addReport($commentID, $_GET['id_chapter']);
+
+
+        }
 
         // edit commentaire - ouvre le formulaire
 

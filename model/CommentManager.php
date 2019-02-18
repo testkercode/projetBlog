@@ -40,7 +40,16 @@ class CommentManager extends Manager
 
     }
 
+    public function report($id)
+    {
+        $db = $this->dbConnect();
+        $reportcomment = $db->query(" UPDATE comment SET report= report +1 WHERE id= '$id' ");
+        
+        return $reportcomment;
 
+        
+
+    }
     // $comments = $db->prepare('SELECT  content, creation_date, pseudo FROM comment INNER JOIN member ON id_member =member.id WHERE id_chapter = ?  ORDER BY creation_date DESC');
 
 }

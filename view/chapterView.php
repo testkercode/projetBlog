@@ -22,6 +22,9 @@
                 <br />
             </p>
         </div>
+
+        <?php if(!empty($_SESSION['pseudo'])) { ?>
+
         <div class="news">
             <h2> <em>Utilisez le formulaire pour laisser un commentaire ! </em></h2>
 
@@ -40,6 +43,7 @@
                 </div>
             </form>
         </div>
+        <?php } ?>
 
 
         <div class="news">
@@ -58,9 +62,20 @@ foreach ($allComments as $comment)
                 <?= nl2br(htmlspecialchars($comment['content'])) ?>
 
             </p>
-            <?php if(isset($_SESSION['rang']) && $_SESSION['rang'] ==  '1') { ?>
+
+
+
+            
             <p id="edition">
+
+            <?php if(!empty($_SESSION['pseudo'])) { ?>
+             <a href="index.php?action=click&id=<?= $comment['id']?>&id_chapter=<?= $_GET['id']?>" class="btn-dark">SIGNALER</a>
+            <?php }?>
+
+            <?php if(isset($_SESSION['rang']) && $_SESSION['rang'] ==  '1') { ?>
                 <a href="index.php?action=editForm&id=<?= $comment['id'] ?>&id_chapter=<?= $_GET['id']?>" class="btn-primary">EDITER</a>
+
+                
 
                 
 
