@@ -47,15 +47,43 @@ h3
     color: black;
     height: 40px;
     line-height: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 35px;
     
 
 }
+#menu{
+    display: none;
+    position: relative;
+    height: 130px;
+}
+#menu li{
+    border-bottom: 1px solid black;
+}
+#admin{
+    background-color: grey;
+    padding:5px;
+}
+
+#admin:hover #menu{
+    display: block;
+    position: absolute;
+    z-index: 10000;
+    padding: 0;
+    line-height: 28px;
+    background-color: grey;
+}
+
 #hnav{
     color: rgb(0, 0, 0);
+    float:left;
 }
 #nav ul{
     list-style: none;
+    
+}
+#p-0{
+    position: absolute;
+    right: 25%;
     
 }
 #user{

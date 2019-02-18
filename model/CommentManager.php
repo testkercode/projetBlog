@@ -50,6 +50,18 @@ class CommentManager extends Manager
         
 
     }
-    // $comments = $db->prepare('SELECT  content, creation_date, pseudo FROM comment INNER JOIN member ON id_member =member.id WHERE id_chapter = ?  ORDER BY creation_date DESC');
 
+    
+    public function getReport()
+    {
+    $db = $this->dbConnect();
+    $req= $db->prepare('SELECT comment.id, content, pseudo , report FROM comment INNER JOIN member ON id_member =member.id WHERE report > 0 ');
+    $req->execute();
+    $reports = $req->fetchall();
+    $req->closeCursor();
+        
+
+    return $reports;
+    }
+ 
 }

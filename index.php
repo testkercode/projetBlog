@@ -62,6 +62,21 @@ try{
 
         }
 
+        ////////////////////// GESTION MENU ADMIN ///////////////////
+        elseif ($_GET['action'] == 'adminview'){
+
+            
+            countReports();
+            
+        }
+
+        elseif  ($_GET['action'] == 'userview'){
+
+            countMembers();
+            
+
+        }
+
         // ///////////////////////////////   GESTION DES CHAPITRES   //////////////////////////////////////
 
         // AJOUT D UN CHAPITRE 

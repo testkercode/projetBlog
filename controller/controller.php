@@ -6,7 +6,7 @@ require_once('model/CommentManager.php');
 require_once('model/EditCommentManager.php');
 require_once('model/MemberManager.php');
 
-// CHAPTER /////////////////////////////////////////
+/////////////////////////////////////                 CHAPTERS                 /////////////////////////////////////////
 
 
 function addChapter($title,$content)
@@ -33,7 +33,6 @@ function chapter($id)
     $commentManager = new CommentManager();  
     $chapter = $chapterManager->getChapter($id);
     // $comments recupere le contenu du tableau $comments de commentmanager appel du parametre getcomment
-    // $comments = $commentManager->getComments($id);
     $allComments = $commentManager->getComments($id);
 
     require('view\ChapterView.php');
@@ -49,7 +48,7 @@ function delChapter($deleteid){
     header('Location: index.php');
 }
 
-// COMMENT ///////////////////////////////////////////////////////////////////////
+///////////////////////   COMMENTS            ///////////////////////////////////////////////////////////////////////
 
 
 function addComment($comment,$id_chapter, $id_member )
@@ -66,7 +65,7 @@ function addComment($comment,$id_chapter, $id_member )
     }
 }
 
-// signale un commentaire 
+/// ************************            signale un commentaire           ******************************************
 
 function addReport($id,$id_chapter)
 {
@@ -78,6 +77,17 @@ function addReport($id,$id_chapter)
     header('Location: index.php?action=comment&id='. $id_chapter);
     
 }
+
+function countReports()
+{
+    $reportmanager = new CommentManager();
+    $reports =  $reportmanager->getReport();
+
+    require('view/adminCommentaireView.php');
+}
+
+
+
 
 function editForm(){
     $editCommentManager = new EditCommentManager();
@@ -92,10 +102,7 @@ function editComment($id,$editComment,$id_chapter){
 
     $affectedLines = $editCommentManager->editComment($id, $editComment);
 
-    // if ($affectedLines === false) {
-    //     throw new Exception('Impossible de modifier le commentaire !');
-    // }
-    // else {
+
         header('Location: index.php?action=comment&id='. $id_chapter);
     // }
 }
@@ -109,7 +116,7 @@ function delComment($id,$id_chapter){
     header('Location: index.php?action=comment&id=' . $id_chapter);
 }
 
-// MEMBER
+////// ***************************          MEMBERS                      **************************************************
 function registerMember($pseudo, $password_1){
 
     $registerMember = new MemberManager();
@@ -117,14 +124,13 @@ function registerMember($pseudo, $password_1){
     $passHash= password_hash($password_1, PASSWORD_DEFAULT );
 
     $addNewMember = $registerMember->registerMember($pseudo, $passHash);
-
+    
 
     header('Location: index.php');
 
 }
 function loginMember($pseudo, $password_1){
     $loginMember =new MemberManager();
-
 
     $member = $loginMember->loginMember($pseudo);
 
@@ -141,8 +147,21 @@ function loginMember($pseudo, $password_1){
         throw new Exception('Mauvaise combinaison login/password');
     }
 
-
 }
+
+function countMembers() {
+
+    // count member + list member 
+
+    $countMember =new MemberManager();
+    $mb = $countMember->CountMembers();
+    $memberManager = new MemberManager();
+    $members = $memberManager->getMembers();
+    
+
+    require('view/adminMemberView.php');
+}
+
 
 
 //  fin de controller

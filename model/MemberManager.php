@@ -25,4 +25,28 @@ class MemberManager extends Manager{
 
 
     }
+
+    public function CountMembers() {
+        $db = $this->dbConnect();
+        $member= $db->query(' SELECT COUNT(*) AS total FROM member');
+        $mb = $member ->fetch();
+        $member->closeCursor();
+
+        return $mb;
+
+    }
+
+    public function getMembers()
+    {
+        $db = $this->dbConnect();
+        $members = $db->query('SELECT * FROM member');
+
+        return $members;
+
+    }
+
+
+
+
+
 }
