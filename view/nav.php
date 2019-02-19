@@ -28,9 +28,6 @@
 
             <?php } ?>
 
-
-
-
             <!-- affiche seulement si pseudo = admin  -->
 
             <?php if(isset($_SESSION['rang']) && $_SESSION['rang'] ==  '1') { ?>
@@ -41,7 +38,7 @@
                         <li><a href="index.php?action=formChapter">CHAPITRES</a></li>
                         <li><a href="index.php?action=adminview">COMMENTAIRES</a></li>
                         <li><a href="index.php?action=userview">MEMBRES</a></li>
-                        
+
 
                         <?php } ?>
                     </ul>
@@ -49,7 +46,7 @@
 
             </ul>
 
-           
+
 
         </ul>
 

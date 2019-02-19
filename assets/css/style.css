@@ -1,167 +1,212 @@
-body{
-    background-color:rgb(152, 152, 152);
+body {
+    background-color: #0e6b93;
+    background-image: url('../images/fond.jpg')
 }
 
-h1,h2, h3
-{
-    text-align:center;
+h1, h2, h3 {
+    color: #000000;
+    text-align: center;
+    background-color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-bottom: 3px solid black;
 }
-h3
-{
-    background-color: #808080;
-    color:white;
-    font-size:1.5em;
+
+h1 {
+    border-bottom: 4px solid black;
+    margin-top: 25px;
+    height: 85px;
+    line-height: 85px;
+}
+
+h3 {
+    border-bottom: 3px solid black;
+    font-size: 1.5em;
     padding: 1%;
-    margin-bottom:0px;
+    margin-bottom: 0px;
 }
-.news p
-{
-    background-color :#ffffff;
+
+.news p {
+   
+    font-weight: 600;
     padding: 5%;
 }
-.news
-{
-    width:80%;
-    margin:auto;
-}
-.news form{
-    background-color:#808080;
-    margin-bottom:2em;
-    padding:1%;
+.list{
+
+    background-color: #ffffff;
+    margin-bottom: 2em;
+    padding: 1%;
     border: 1px solid black;
-    
+
+
 }
-.news h2{
-    background-color:#808080;
-    padding:1%;
+.news {
+    width: 80%;
+    margin: auto;
+}
+
+.news form {
+    background-color: #ffffff;
+    margin-bottom: 2em;
+    padding: 1%;
     border: 1px solid black;
+    font-weight: 800;
+}
+
+.news h2 {
+
+    padding: 1%;
+    border: 3px solid black;
 }
 
 .news h3 {
-    background-color:#808080;
-    padding:1%;
-    border: 1px solid black;
-}
-#nav{
-    background-color:gainsboro;
-    color: black;
-    height: 40px;
-    line-height: 20px;
-    margin-bottom: 35px;
-    
 
+    padding: 1%;
+    border: 1px solid black;
+    border-bottom: 3px solid black;
 }
-#menu{
+
+#nav {
+    background-color: #EEEFF1;
+    color: #000000;
+    height: 60px;
+    line-height: 50px;
+    margin-bottom: 35px;
+    border: 1px solid rgb(187, 187, 187);
+}
+
+#menu {
     display: none;
     position: relative;
     height: 130px;
 }
-#menu li{
-    border-bottom: 1px solid black;
-}
-#admin{
-    background-color: grey;
-    padding:5px;
+
+#menu li {
+    border-bottom: 1px solid white;
 }
 
-#admin:hover #menu{
+#admin {
+    font-weight: bold;
+    background-color: #EEEFF1;
+    padding: 0 5px 0 5px;
+    border: 1px solid rgb(172, 172, 172);
+    border-radius: 20px;
+    box-shadow: 5px 5px 0px #aaa; 
+}
+
+#admin:hover #menu {
     display: block;
     position: absolute;
     z-index: 10000;
-    padding: 0;
+    padding: 10px;
     line-height: 28px;
-    background-color: grey;
+    background-color: #EEEFF1;
 }
 
-#hnav{
-    color: rgb(0, 0, 0);
-    float:left;
+#hnav {
+    color: #000000;
+    font-size : 20px;
+    float: left;
 }
-#nav ul{
+
+#nav ul {
     list-style: none;
-    
+    color: #000000;
 }
-#p-0{
+
+#p-0 {
     position: absolute;
     right: 25%;
-    
 }
-#user{
+
+#user {
     font-size: 18px;
     text-transform: uppercase;
-    color: rgb(176, 18, 18);    
+    color: rgb(17, 60, 213);
 }
-a
-{   
+
+a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    font-weight: bold;
+    color: #000000;
     margin-right: 25px;
     margin-left: 10px;
 }
-a:hover{
+
+a:hover {
     text-decoration: none;
-    color: rgb(91, 85, 176);
+    color: rgb(119, 111, 226);
 }
-#pError{
+
+#pError {
     text-align: center;
 }
-#comm{
-    font-size:12px;
-    float:right;
+
+#comm {
+    font-size: 12px;
+    float: right;
     background-color: rgb(33, 18, 144);
     padding: 3px;
     border-radius: 10px;
-    
 }
-#delete{
-    font-size:16px;
+
+#delete {
+    font-size: 16px;
     background-color: red;
     padding: 3px;
     border-radius: 10px;
-   
 }
 
-#back2{
-    font-size:16px;
-    background-color: rgb(49, 49, 49);
-    padding: 3px;
+#back2 {
+    font-size: 16px;
+    background-color: #EEEFF1;
     border-radius: 10px;
-    
+    border: 1px solid white;
 }
-#back{
-    font-size:12px;
 
-    margin-left: -25px;
-    background-color: rgb(135, 93, 93);
+#back {
+    font-size: 12px;
+    border: 1px solid black;
+    margin-left: -50px;
+    background-color: #EEEFF1;
     padding: 10px;
+    color: black;
     border-radius: 10px;
-    
+    box-shadow: 5px 5px 0px #aaa; 
 }
-#commentaire{
-    background-color:#808080; 
+
+#commentaire {
+    background-color: #ffffff;
 }
-#edition{
-    background-color:#808080;  
+
+#edition {
+    background-color: #ffffff;
 }
-#co, #reg{
-    background-color: brown;
+
+#co, #reg {
+    background-color: #EEEFF1;
     padding: 5px;
-    border-radius: 6px; 
+    border-radius: 6px;
     font-size: 14px;
-
 }
 
-#myBtn{
+#myBtn {
     float: right;
-    color: red;
+    color: rgb(0, 0, 0);
 }
-#comBtn{
-    color: blue;
+
+#comBtn {
+    color: rgb(0, 0, 0);
 }
+
 .scroll {
-  
-    background-color: gainsboro ;
+    background-color: #EEEFF1;
     padding: 5px;
     border-radius: 25px;
+    border: 1px solid white;
+    box-shadow: 5px 5px 0px #aaa; 
+}
 
+#deja2 {
+    background-color: #EEEFF1;
 }

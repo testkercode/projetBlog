@@ -45,9 +45,7 @@ class CommentManager extends Manager
         $db = $this->dbConnect();
         $reportcomment = $db->query(" UPDATE comment SET report= report +1 WHERE id= '$id' ");
         
-        return $reportcomment;
-
-        
+        return $reportcomment;    
 
     }
 

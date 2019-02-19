@@ -9,21 +9,21 @@ include('nav.php');
 
     <h2>Commentaires signalés</h2>
 
-<?php 
+    <?php 
 
     foreach ($reports as $rep) {
       
 ?>
-    <p>
+    <p class="list">
 
-    id du commentaire : <?php echo $rep['id']?>  <br> 
-    Auteur  : <?php echo $rep['pseudo']?> <br> 
-    Commentaire : <?php echo $rep['content']?> <br> 
-    signalé :  <?= $rep['report']?> fois  
-    <br> <br>
+        id du commentaire : <?php echo $rep['id']?> <br>
+        Auteur : <?php echo $rep['pseudo']?> <br>
+        Commentaire : <?php echo $rep['content']?> <br>
+        signalé : <?= $rep['report']?> fois
+        <br> <br>
 
     </p>
-<?php
+    <?php
 
 }
 

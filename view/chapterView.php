@@ -30,10 +30,6 @@
 
             <form action="index.php?action=addComment&id=<?= $chapter['id'] ?>&id_member=<?= $_SESSION['id'] ?>"
                 method="post">
-                <!-- <div>
-                    <label for="author">Auteur</label><br />
-                    <input type="text" id="author" name="author" />
-                </div> -->
                 <div>
                     <label for="comment">Commentaire</label><br />
                     <textarea id="comment" name="comment" rows="5" cols="50"></textarea>
@@ -52,7 +48,6 @@
             // foreach va recuperer toutes le contenu du tableau $comments -> controller
 foreach ($allComments as $comment)
 
-// while ($comment = $comments->fetch())
 {
 
     ?>
@@ -61,25 +56,27 @@ foreach ($allComments as $comment)
                 <br><br>
                 <?= nl2br(htmlspecialchars($comment['content'])) ?>
 
+                <?php if(!empty($_SESSION['pseudo'])) { ?>
+
+                <form method="post" id="formABC"
+                    action="index.php?action=click&id=<?= $comment['id']?>&id_chapter=<?= $_GET['id']?>">
+                    <button type="submit" id="btnSubmit">Signaler</button>
+
+                </form>
+
+                <?php }?>
+
             </p>
 
-
-
-            
             <p id="edition">
 
-            <?php if(!empty($_SESSION['pseudo'])) { ?>
-             <a href="index.php?action=click&id=<?= $comment['id']?>&id_chapter=<?= $_GET['id']?>" class="btn-dark">SIGNALER</a>
-            <?php }?>
 
-            <?php if(isset($_SESSION['rang']) && $_SESSION['rang'] ==  '1') { ?>
-                <a href="index.php?action=editForm&id=<?= $comment['id'] ?>&id_chapter=<?= $_GET['id']?>" class="btn-primary">EDITER</a>
+                <?php if(isset($_SESSION['rang']) && $_SESSION['rang'] ==  '1') { ?>
+                <a href="index.php?action=editForm&id=<?= $comment['id'] ?>&id_chapter=<?= $_GET['id']?>"
+                    class="btn-dark">EDITER</a>
 
-                
-
-                
-
-                <a href="index.php?action=deleteC&id=<?= $comment['id'] ?>&id_chapter=<?= $_GET['id']?>" class="btn-danger">SUPPRIMER</a> </h3>
+                <a href="index.php?action=deleteC&id=<?= $comment['id'] ?>&id_chapter=<?= $_GET['id']?>"
+                    class="btn-dark">SUPPRIMER</a> </h3>
             </p>
             <?php
     }
@@ -87,10 +84,7 @@ foreach ($allComments as $comment)
 ?>
         </div>
 
-
     </div>
-
-
 
 
 

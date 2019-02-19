@@ -10,21 +10,21 @@ include('nav.php');
 
     <h2>Utilisateurs enregistrés :</h2>
 
-    <p>
+    <p class="list">
         Il y a <?= $mb['total'] ?> membres enregistrés à ce jour .
     </p>
 
     <h3>Liste des membres :</h3>
-    <p>
-    <?php
+    <p class="list">
+        <?php
         foreach($members as $data){
     ?>
         - <?= ucwords(($data['pseudo'])) ?> <br>
-    
-    
+
+
 
         <?php } ?>
-        </p>
+    </p>
 </div>
 
 

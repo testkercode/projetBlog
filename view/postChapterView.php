@@ -20,7 +20,7 @@
         </div>
         <div class="form-group">
             <button type="submit" class="btn btn-dark" name="reg_user" id="button">Envoyer</button>
-           
+
         </div>
     </form>
     <!-- /.form-group -->

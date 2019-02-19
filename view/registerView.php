@@ -3,10 +3,11 @@
 <?php ob_start(); ?>
 
 <?php include('nav.php')?>
-<h1>ENREGISTREZ VOUS !</h1>
+
 
 
 <div class="news container formulaire3">
+    <h1>ENREGISTREZ VOUS !</h1>
 
     <form class="form-horizontal" role="form" id="formInscription" method="POST" action="index.php?action=register">
         <?php include('errors.php'); ?>
@@ -14,7 +15,7 @@
             <label for="username" class="col-sm-3 control-label">Pseudo</label>
             <div class="col-sm-9">
                 <!-- <input type="text" name="pseudo" value="<?php echo $username; ?>" class="form-control"> -->
-                <input type="text" name="pseudo"  class="form-control" required >
+                <input type="text" name="pseudo" class="form-control" required>
             </div>
         </div>
         <div class="form-group">
@@ -33,13 +34,13 @@
             <button type="submit" class="btn btn-dark" name="reg_user" id="button">Envoyer</button>
             <div class="col-sm-9">
             </div>
-</div> <!-- /.form-group -->
+        </div> <!-- /.form-group -->
 
-<div class="row">
+        <div class="row">
 
             <div class="container">
                 <p class="butform">
-                    <span>Déja enregistré ?  :</span> <a href="index.php?action=formLogin"id="co">Connexion</a>
+                    <span>Déja enregistré ? :</span> <a href="index.php?action=formLogin" id="co">Connexion</a>
                 </p>
             </div>
     </form>

@@ -11,6 +11,7 @@ try{
         // ///////////////////////  GESTION DES UTILISATEURS  /////////////////////////////////////
 
         //enregistrement user
+
         if ($_GET['action'] == 'register'){
 
             if (isset($_POST['reg_user'])) {
@@ -30,16 +31,19 @@ try{
 
         }
         // affiche le formulaire enregistrement
+
         elseif ($_GET['action'] == 'formRegister'){
             require('view/registerView.php');
 
         }
         // affiche le formulaire de login
+
         elseif ($_GET['action'] == 'formLogin'){
             require('view/loginView.php');
 
         }
         // login
+
         if ($_GET['action'] == 'login'){
 
             if (isset($_POST['login_user'])) {
@@ -52,6 +56,7 @@ try{
 
         }
         // deconnection user
+
         elseif ($_GET['action'] == 'deco'){
 
             session_unset();
@@ -63,6 +68,7 @@ try{
         }
 
         ////////////////////// GESTION MENU ADMIN ///////////////////
+
         elseif ($_GET['action'] == 'adminview'){
 
             
@@ -187,7 +193,6 @@ try{
 
             addReport($commentID, $_GET['id_chapter']);
 
-
         }
 
         // edit commentaire - ouvre le formulaire
@@ -233,12 +238,9 @@ try{
             }
             else {
                 throw new Exception('Aucun identifiant de billet envoyé');
-            }
-    
+            }    
         }
-        
-        
-    
+           
     }
     else{
         listChapters();

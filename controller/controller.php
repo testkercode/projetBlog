@@ -1,12 +1,11 @@
 <?php
 
-
 require_once('model/ChapterManager.php');
 require_once('model/CommentManager.php');
 require_once('model/EditCommentManager.php');
 require_once('model/MemberManager.php');
 
-/////////////////////////////////////                 CHAPTERS                 /////////////////////////////////////////
+/////////////////////////////////////  CHAPTERS            /////////////////////////////////////////
 
 
 function addChapter($title,$content)
@@ -117,12 +116,12 @@ function delComment($id,$id_chapter){
 }
 
 ////// ***************************          MEMBERS                      **************************************************
+
+
 function registerMember($pseudo, $password_1){
 
     $registerMember = new MemberManager();
-
     $passHash= password_hash($password_1, PASSWORD_DEFAULT );
-
     $addNewMember = $registerMember->registerMember($pseudo, $passHash);
     
 
@@ -131,9 +130,7 @@ function registerMember($pseudo, $password_1){
 }
 function loginMember($pseudo, $password_1){
     $loginMember =new MemberManager();
-
     $member = $loginMember->loginMember($pseudo);
-
     if (password_verify($password_1,$member['password'])) {
 
         // stocke dans $_SESSION les données de l utilisateur
