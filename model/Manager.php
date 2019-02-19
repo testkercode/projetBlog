@@ -1,6 +1,11 @@
 <?php
 
 
+namespace Nico\model;
+
+use \PDO;
+
+
 
 
 class Manager

@@ -1,7 +1,10 @@
 <?php
 
+namespace Nico\model;
 
-require_once("model/Manager.php");
+use \Nico\model\Manager;
+
+// require_once("model/Manager.php");
 
 class EditCommentManager extends Manager {
 

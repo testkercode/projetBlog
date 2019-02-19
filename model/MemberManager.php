@@ -1,5 +1,11 @@
 <?php
-require_once("model/Manager.php"); 
+
+
+namespace Nico\model;
+
+use \Nico\model\Manager;
+
+// require_once("model/Manager.php"); 
 
 
 class MemberManager extends Manager{

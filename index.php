@@ -2,6 +2,8 @@
 session_start();
 setcookie( 'id','pseudo', time() + 365*24*3600, null, null, false, true); 
 
+
+require ('vendor/autoload.php');
 require('controller/controller.php');
 
 
