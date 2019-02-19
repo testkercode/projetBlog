@@ -45,7 +45,12 @@ function chapter($id)
 
 function delChapter($deleteid){
 
+    // d abord supprimer les commentaires attachés au chapitre
+
     $chapterManager = new ChapterManager();
+    $commentManager = new CommentManager();
+    $delComment = $commentManager->deleteComment($id);
+
     $delChapter = $chapterManager->deleteChapter($deleteid);
 
     header('Location: index.php');

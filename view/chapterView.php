@@ -72,6 +72,7 @@ foreach ($allComments as $comment)
 
 
                 <?php if(isset($_SESSION['rang']) && $_SESSION['rang'] ==  '1') { ?>
+                
                 <a href="index.php?action=editForm&id=<?= $comment['id'] ?>&id_chapter=<?= $_GET['id']?>"
                     class="btn-dark">EDITER</a>
 

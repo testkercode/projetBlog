@@ -72,14 +72,14 @@ try{
 
         ////////////////////// GESTION MENU ADMIN ///////////////////
 
-        elseif ($_GET['action'] == 'adminview'){
+        elseif ($_GET['action'] == 'adminview' && isset($_SESSION['rang']) && $_SESSION['rang'] ==  '1'){
 
             
             countReports();
             
         }
 
-        elseif  ($_GET['action'] == 'userview'){
+        elseif  ($_GET['action'] == 'userview' && isset($_SESSION['rang']) && $_SESSION['rang'] ==  '1'){
 
             countMembers();
             
@@ -92,13 +92,13 @@ try{
 
 
         // AJout d un chapitre ( formulaire )
-        elseif  ($_GET['action'] == 'formChapter'){
+        elseif  ($_GET['action'] == 'formChapter' && isset($_SESSION['rang']) && $_SESSION['rang'] ==  '1'){
             require('view/postChapterView.php');
         }
         
         // Ajout du chapitre
 
-        elseif ($_GET['action'] == 'addChapter') {
+        elseif ($_GET['action'] == 'addChapter' && isset($_SESSION['rang']) && $_SESSION['rang'] ==  '1') {
             if (!empty($_POST['title']) && !empty($_POST['content'])){
 
                       
@@ -121,7 +121,7 @@ try{
 
         // Suppression d un chapitre
         
-        elseif ($_GET['action'] == 'supp'){  
+        elseif ($_GET['action'] == 'supp' && isset($_SESSION['rang']) && $_SESSION['rang'] ==  '1'){  
 
             if (isset($_GET['id']) && $_GET['id'] > 0) 
             {  
@@ -200,7 +200,7 @@ try{
 
         // edit commentaire - ouvre le formulaire
 
-        elseif ($_GET['action'] == 'editForm'){
+        elseif ($_GET['action'] == 'editForm' && isset($_SESSION['rang']) && $_SESSION['rang'] ==  '1'){
 
             if (isset($_GET['id']) && $_GET['id'] > 0) {
 
@@ -216,7 +216,7 @@ try{
         }
         //  edition du commentaire
 
-        elseif ($_GET['action'] == 'editComment'){
+        elseif ($_GET['action'] == 'editComment' && isset($_SESSION['rang']) && $_SESSION['rang'] ==  '1'){
             if (isset($_GET['id']) && $_GET['id'] > 0) {
                 if (!empty($_POST['comment'])) {
                     editComment($_GET['id'], $_POST['comment'], $_GET['id_chapter']);
@@ -230,7 +230,7 @@ try{
             }
         }
 
-        elseif ($_GET['action'] == 'deleteC') 
+        elseif ($_GET['action'] == 'deleteC' && isset($_SESSION['rang']) && $_SESSION['rang'] ==  '1')
             { 
             if (isset($_GET['id']) && $_GET['id'] > 0) 
             {  
@@ -243,6 +243,9 @@ try{
                 throw new Exception('Aucun identifiant de billet envoyé');
             }    
         }
+        else{
+            listChapters();
+        }  
            
     }
     else{
