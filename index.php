@@ -2,8 +2,9 @@
 session_start();
 setcookie( 'id','pseudo', time() + 365*24*3600, null, null, false, true); 
 
+// test git
 
-require ('vendor/autoload.php');
+require('vendor/autoload.php');
 require('controller/controller.php');
 
 

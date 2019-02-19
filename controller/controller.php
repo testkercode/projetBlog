@@ -8,10 +8,6 @@ use \Nico\model\EditCommentManager;
 use \Nico\model\MemberManager;
 
 
-// require_once('model/ChapterManager.php');
-// require_once('model/CommentManager.php');
-// require_once('model/EditCommentManager.php');
-// require_once('model/MemberManager.php');
 
 /////////////////////////////////////  CHAPTERS            /////////////////////////////////////////
 
